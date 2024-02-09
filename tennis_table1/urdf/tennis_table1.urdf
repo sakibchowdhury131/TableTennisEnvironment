@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tennis_table1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="1.1464 1.7718 2.1195"
+        rpy="0 0 0" />
+      <mass
+        value="181.32" />
+      <inertia
+        ixx="38.538"
+        ixy="-2.7856E-07"
+        ixz="-0.0004897"
+        iyy="147.77"
+        iyz="-0.017556"
+        izz="113.81" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tennis_table1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tennis_table1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>
