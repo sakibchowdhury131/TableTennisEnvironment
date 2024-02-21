@@ -51,7 +51,21 @@ def calculate_h2(estimated_initial_velocity, t1, t2): # this will provide the se
     vz = estimated_initial_velocity[2] - g*t1
     new_velocity = [vx, vy, -vz] # vz will change sign because now the direction of the projectile in z axis is reversed
     h2 = new_velocity[2]*t2 - 0.5*g*(t2**2)
+
     return h2
+
+
+def had_double_bounce(h2):
+    if h2 <= 0:
+        return True
+    else:
+        return False
+
+def had_no_bounce(vx, t1, distance_ball_robot):
+    if vx*t1 >= distance_ball_robot:
+        return True
+    else:
+        return False
 
 
 ## This function will estimate where the ball will hit the Y-Z plane after the first bounce
@@ -61,7 +75,7 @@ def estimate_hitting_point(ball_initial_position, robot_initial_position, estima
 
     y = ball_initial_position[1] + estimated_initial_velocity[1] * (t1 + t2)
     z = h2 + table_height + base_surface_thickness
-    return (y, z)
+    return (y, z), t1, t2
 
 
 
